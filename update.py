@@ -26,22 +26,6 @@ stream_handler.setFormatter(formatter)
 
 basicConfig(handlers=[file_handler, stream_handler], level=INFO)
 
-CONFIG_FILE_URL = environ.get('CONFIG_FILE_URL')
-try:
-    if len(CONFIG_FILE_URL) == 0:
-        raise TypeError
-    try:
-        res = get(CONFIG_FILE_URL)
-        if res.status_code == 200:
-            with open('config.env', 'wb+') as f:
-                f.write(res.content)
-        else:
-            error(f"Failed to download config.env {res.status_code}")
-    except Exception as e:
-        error(f"CONFIG_FILE_URL: {e}")
-except:
-    pass
-
 load_dotenv('config.env', override=True)
 
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
