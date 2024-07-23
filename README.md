@@ -31,13 +31,6 @@ programming in Python.
   is provided) (task option)
 - Edit Global Options while the bot is running from bot settings (global option)
 
-## Sabnzbd
-
-- External access to web interface, so you can remove files or edit settings. Then you can sync settings in database with sync button in bsetting
-- Remove files from job before and during download using mltb file selector (Requires Base URL) (task option)
-- Edit Global Options while the bot is running from bot settings (global option)
-- Servers menu to edit/add/remove usenet servers
-
 ## TG Upload/Download
 
 - Split size (global, user, and task option)
@@ -85,14 +78,6 @@ programming in Python.
 - Embed the original thumbnail and add it for leech
 - All supported audio formats
 
-## JDownloader
-
-- Synchronize Settings (global option)
-- Waiting to select (enable/disable files or change variants) before download start
-- DLC file support
-- All settings can be edited from the remote access to your JDownloader with Web Interface, Android App, iPhone App or
-  Browser Extensions
-
 ## Mongo Database
 
 - Store bot settings
@@ -116,15 +101,6 @@ programming in Python.
 
 > ZIP, RAR, TAR, 7z, ISO, WIM, CAB, GZIP, BZIP2, APM, ARJ, CHM, CPIO, CramFS, DEB, DMG, FAT, HFS, LZH, LZMA, LZMA2,MBR,
 > MSI, MSLZ, NSIS, NTFS, RPM, SquashFS, UDF, VHD, XAR, Z, TAR.XZ
-
-## RSS
-
-- Based on this repository [rss-chan](https://github.com/hyPnOtICDo0g/rss-chan)
-- Rss feed (user option)
-- Title Filters (feed option)
-- Edit any feed while running: pause, resume, edit command and edit filters (feed option)
-- Sudo settings to control users feeds
-- All functions have been improved using buttons from one command.
 
 ## Rclone
 
