@@ -26,22 +26,6 @@ stream_handler.setFormatter(formatter)
 
 basicConfig(handlers=[file_handler, stream_handler], level=INFO)
 
-CONFIG_FILE_URL = environ.get('CONFIG_FILE_URL')
-try:
-    if len(CONFIG_FILE_URL) == 0:
-        raise TypeError
-    try:
-        res = get(CONFIG_FILE_URL)
-        if res.status_code == 200:
-            with open('config.env', 'wb+') as f:
-                f.write(res.content)
-        else:
-            error(f"Failed to download config.env {res.status_code}")
-    except Exception as e:
-        error(f"CONFIG_FILE_URL: {e}")
-except Exception:
-    pass
-
 load_dotenv('config.env', override=True)
 
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
@@ -65,7 +49,7 @@ if DATABASE_URL:
 
 UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = 'https://github.com/lordgaruda/aeon-fork'
+    UPSTREAM_REPO = 'https://github.com/lordgaruda/aeon-vps'
 
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
 if len(UPSTREAM_BRANCH) == 0:
