@@ -28,6 +28,13 @@ basicConfig(handlers=[file_handler, stream_handler], level=INFO)
 
 load_dotenv('config.env', override=True)
 
+try:
+    if bool(environ.get('_____REMOVE_THIS_LINE_____')):
+        log_error('The README.md file there to be read! Exiting now!')
+        exit()
+except:
+    pass
+    
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
 if len(BOT_TOKEN) == 0:
     error("BOT_TOKEN variable is missing! Exiting now")
