@@ -469,8 +469,6 @@ if ospath.exists("accounts.zip"):
     osremove("accounts.zip")
 if not ospath.exists("accounts"):
     config_dict["USE_SERVICE_ACCOUNTS"] = False
-alive = Popen(["python3", "alive.py"])
-sleep(0.5)
 
 aria2 = ariaAPI(ariaClient(host="http://localhost", port=6800, secret=""))
 
