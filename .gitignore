@@ -8,11 +8,13 @@ data*
 .netrc
 log.txt
 accounts/*
+MediaInfo/*
+Images/*
 Thumbnails/*
 rclone/*
 tokens/*
-sabnzbd/*
 list_drives.txt
+shorteners.txt
 cookies.txt
 downloads
 bot.session*
