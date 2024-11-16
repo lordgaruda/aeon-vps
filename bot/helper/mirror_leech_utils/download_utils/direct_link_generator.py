@@ -27,7 +27,7 @@ domain_dict = {
     "github": ["github.com"],
     "hxfile": ["hxfile.co"],
     "onedrive": ["1drv.ms"],
-    "pixeldrain": ["pixeldrain.com"],
+    "pixeldrain": ["pixeldrain.com" , "pixeldra.in"],
     "racaty": ["racaty"],
     "fichier": ["1fichier.com"],
     "solidfiles": ["solidfiles.com"],
@@ -274,11 +274,11 @@ def pixeldrain(url):
     url = url.strip("/ ")
     file_id = url.split("/")[-1]
     if url.split("/")[-2] == "l":
-        info_link = f"https://pixeldrain.com/api/list/{file_id}"
-        dl_link = f"https://pixeldrain.com/api/list/{file_id}/zip?download"
+        info_link = f"https://pixeldra.in/api/list/{file_id}"
+        dl_link = f"https://pixeldra.in/api/list/{file_id}/zip?download"
     else:
-        info_link = f"https://pixeldrain.com/api/file/{file_id}/info"
-        dl_link = f"https://pixeldrain.com/api/file/{file_id}?download"
+        info_link = f"https://pixeldra.in/api/file/{file_id}/info"
+        dl_link = f"https://pixeldra.in/api/file/{file_id}?download"
     with create_scraper() as session:
         try:
             resp = session.get(info_link).json()
