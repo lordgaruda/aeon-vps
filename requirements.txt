@@ -5,6 +5,7 @@ anytree==2.8.0
 apscheduler
 aria2p
 asyncio
+blinker==1.7.0
 beautifulsoup4
 bencoding
 cinemagoer
